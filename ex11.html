@@ -1,0 +1,100 @@
+//비교문과 조건문
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+     function linksSetColor(color){
+        var alist = document.querySelectorAll('a');
+       var i = 0;
+       while(i < alist.length) {
+          alist[i].style.color = color;
+          i++;
+       }
+     }
+
+     function bodySetColor(color) {
+        document.querySelector('body').style.color = color;
+     }
+
+     function bodySetBackgroundColor(color) {
+        document.querySelector('body').style.backgroundColor = color;
+     }
+       
+
+
+     function nightDayHandler(self){
+        var target = document.querySelector('body');
+         if(self.value === 'night') {
+       bodySetBackgroundColor('black');
+       bodySetColor('white');
+       self.value = 'day';
+       linksSetColor('powderblue');    
+         
+    } else {
+       bodySetBackgroundColor('white');
+       bodySetColor('black');
+       self.value = 'night';
+       linksSetColor('blue');
+     }
+   }
+    </script>
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Conditional statement</h1>
+    
+    <input type="button" value="night" onclick="
+      nightDayHandler(this);
+   ">
+
+<h2> Co workers</h2>
+<ul>
+   <script>
+      var coworkers = ['egoing','leezche','duru','taeho', 'hongbin'];
+      var i = 0;
+      while(i < coworkers.length) {
+          document.write('<li><a href="http://a.com/ +coworkers[i]">'+coworkers[i]+'</a></li>');
+          i++;
+      }  
+   </script>
+</ul>
+
+
+    <h2>Program</h2>
+    <script>
+     document.write("1<br>");
+     document.write("2<br>");
+     document.write("3<br>");
+     document.write("4<br>");
+    </script>
+
+    <h2>If-true</h2>
+    <script>
+     document.write("1<br>");
+     if(true) {
+        document.write("2<br>");
+     } else {
+        document.write("3<br>");      
+     }
+     document.write("4<br>");
+    </script>
+
+
+    <h2>If-false</h2>
+    <script>
+     document.write("1<br>");
+     if(false) {    
+        document.write("2<br>");        
+     } else {
+        document.write("3<br>");
+     }
+     document.write("4<br>");
+    </script>
+     
+    
+
+
+</body>
+</html>
